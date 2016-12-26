@@ -24,13 +24,13 @@ public class AccountController {
 	ConversionUtils conversionUtils;
 	
 	@RequestMapping(value = "/lookup{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-	public AccountDTO lookUpAccount(@PathVariable String id){
+	public List<Account> lookUpAccount(@PathVariable String id){
 		try {
 			
 			
 			List<Account> accounts = accountService.fetchAllUserAccount(id);
 			AccountDTO accountDTO = conversionUtils.convertAccountEntityToDTO(accounts.get(0));
-			return accountDTO;
+			return accounts;
 			
 		} catch (Exception e) {
 			e.printStackTrace();
