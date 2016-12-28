@@ -87,7 +87,7 @@ With the updated database properties in application.properties run your applicat
 ### Verify deployment
 Click on the generated url and you will be able to see your web application deployed on AWS.
 
-#### Checkout http://custom-env.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST app deployed in AWS using Amazon RDS. The application retrieves all data in Account table from relational database and is displayed in JSON format.
+#### Checkout http://custom-env.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST app deployed in AWS using Amazon RDS. The application retrieves all data in Account table from the attached relational database in cloud and is displayed in JSON format.
 
 
 
