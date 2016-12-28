@@ -81,7 +81,7 @@ With the updated database properties in application.properties run your applicat
 5. This may take few minutes. Once deployment id complete you can see the health status of your application as OK.
 
 ### Verify deployment
-Click on the generated url and you will be able to see your web application deployed on AWS.
+Click on the generated url and you will be able to see your web application deployed on cloud.
 
 #### Checkout http://custom-env.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST app deployed in AWS using Amazon RDS. The application retrieves all data in Account table from the attached relational database in cloud and is displayed in JSON format.
 
