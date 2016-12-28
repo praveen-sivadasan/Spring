@@ -36,15 +36,11 @@ Elastic Beanstalk is a service offered by AWS in helping users quickly deploy an
 6. Once the RDS is generated save the database details into application.properties file.
 A sample RDS connection details will look like:
 
-CONN_URL    aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com:3306
-
-RDS_DB_NAME aa1q7w53k4u7ptn
-
-RDS_USERNAME --------
-
-RDS_PASSWORD --------
-
-RDS_HOSTNAME aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com
+##### CONN_URL    *aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com:3306*
+##### RDS_DB_NAME *aa1q7w53k4u7ptn*
+##### RDS_USERNAME --------
+##### RDS_PASSWORD --------
+##### RDS_HOSTNAME *aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com*
 
 ### Security group for your Amazon RDS
 A security group acts as a virtual firewall that controls the traffic for one or more instances. Check the [link](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) for more details. By default, network access is turned off to a DB instance. Check out the [link](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html) for more details.
