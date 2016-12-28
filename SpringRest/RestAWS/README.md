@@ -4,8 +4,8 @@
 1. Develop a Spring Rest application using eclipse IDE or Spring Tool Suite.
 2. Connect the application to a local mysql server database.
 3. Integrate and create application build using Apache Maven 3.0.
-4. Verify the application is deplyed in Tomcat container and is functioning properly.
-5. We will be updating the application database connection details later using AWS RDS credentials.
+4. Verify the application is deployed in Tomcat container and is functioning properly.
+5. We will update the application database connection details later before deploying to cloud using Amazon RDS credentials.
 
 ### AWS Account - Sign up
 1. [AWS Signup Console](https://aws.amazon.com/console)
@@ -35,14 +35,59 @@ Elastic Beanstalk is a service offered by AWS in helping users quickly deploy an
 5. Enter a username and password for your database and proceed to generate a relational database.
 6. Once the RDS is generated save the database details into application.properties file.
 A sample RDS connection details will look like:
+
 CONN_URL    aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com:3306
+
 RDS_DB_NAME aa1q7w53k4u7ptn
+
 RDS_USERNAME --------
+
 RDS_PASSWORD --------
+
 RDS_HOSTNAME aa1q7w53k4u7ptn.ceoy61iaondj.us-west-2.rds.amazonaws.com
 
 ### Security group for your Amazon RDS
-1. 
+A security group acts as a virtual firewall that controls the traffic for one or more instances. Check the [link](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html) for more details. By default, network access is turned off to a DB instance. Check out the [link](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html) for more details.
+
+1. Navigate to EC2 dashboard through Services tab on top left corner.
+2. View Security Groups under Network & Security.
+3. Click on default security group and modify the Inbound and Outbound.
+4. Choose source as anywhere for both and press save.(Note: This is only for a test environment. For production authorize for a specific IP address only) Click on the [link](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/authorizing-access-to-an-instance.html) for further details.
+
+### AWS Identity and Access Management (IAM) user
+Add an Administrator user to your Amazon AWS account to access AWS plugin through Eclipse IDE.
+
+1. Naviagte to IAM dashboard through Services tab on top left corner.
+2. Under the Users section click on add new user.
+3. Provide access type as Programmatic access which will generate a access key and secret key.
+4. Attach an existing policy with full administrator access and create the user keys.
+5. Note down the access key and secret key.
+
+### AWS plugin for Eclipse IDE
+The AWS Toolkit for Eclipse is an open source plug-in for the Eclipse Java IDE that makes it easier for developers to develop, debug, and deploy Java applications using Amazon Web Services. Click on the [link](http://docs.aws.amazon.com/toolkit-for-eclipse/v1/user-guide/) for more details.
+
+1. Download AWS toolkit from Eclipse marketplace.
+2. Install the plugin and it will prompt for access key and secret key to link to your AWS account.
+
+### Accessing Amazon RDS schema through Eclipse
+1. Once the AWS toolkit is installed, open the AWS Management perspective in eclipse.
+2. Under the Amazon RDS link you will be able to see your database. Double click and enter master username and pasword.
+3. Create a schema and add tables and data into your relational database.
+
+### Test your Spring REST application locally with Amazon RDS
+With the updated database properties in application.properties run your application locally on Apache tomcat server. Once the connection is successful check whether you are able to add and retrieve data from Amazon RDS.
+
+### Uploading your war into cloud
+1. Navigate to Elastic Beanstalk dashboard.
+2. Select the application you have created.
+3. Click on upload and deploy.
+4. Choose the war file of your Spring REST application and provide a version label. Click on deploy.
+5. This may take few minutes. Once deployment id complete you can see the health status of your application as OK.
+
+### Verify deployment
+Click on the generated url and you will be able to see your web application deployed on AWS.
+
+#### Checkout http://custom-env.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST app deployed in AWS using Amazon RDS. The application retrieves all data in Account table from relational database and is displayed in JSON format.
 
 
 
