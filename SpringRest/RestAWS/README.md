@@ -1,4 +1,4 @@
-# Deploy a Spring Rest application in AWS using Elastic BeanStalk
+# Deploy a Spring Rest application on AWS platform using Elastic BeanStalk and Amazon RDS
 
 ### Create a Spring Rest application
 1. Develop a Spring Rest application using eclipse IDE or Spring Tool Suite.
