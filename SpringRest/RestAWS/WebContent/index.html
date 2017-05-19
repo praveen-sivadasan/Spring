@@ -10,7 +10,7 @@
 	
 <script type="text/javascript">
 $(document).ready(function(){
-	$.get("http://localhost:8081/RestAWS/api/account/lookup?id=''",function(data,status){
+	$.get("http://sample-env-1.2e9zsnfuny.us-west-2.elasticbeanstalk.com/api/account/lookup?id=''",function(data,status){
 		if(status === 'success'){
 			$.each(data,function(index,value){
 				if(value != ' '){
