@@ -99,7 +99,7 @@ Sample Amazon RDS connection details will look like following:
 ### Verify your app deployment
 *Click on the generated url and you will be able to see your Spring application hosted in cloud.*
 
-#### Checkout http://custom-env.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST project deployed on AWS platform with a cloud database. The application retrieves all the data in the Account table from the attached relational database and is displayed in JSON format on the view.
+#### Checkout http://sample-env-1.2e9zsnfuny.us-west-2.elasticbeanstalk.com/account/lookup to view my Spring REST project deployed on AWS platform with a cloud database. The application retrieves all the data in the Account table from the attached relational database and is displayed in JSON format on the view.
 
 
 
