@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="lib/jquery-1.10.2.js" type="text/javascript">
+	</script>
+	<meta charset="ISO-8859-1">
+	<title>AWS</title>
+</head>
+<body>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	$.get("http://localhost:8081/RestAWS/api/account/lookup?id=''",function(data,status){
+		if(status === 'success'){
+			$.each(data,function(index,value){
+				if(value != ' '){
+			 		$('body').append(value);
+					$('body').append('<br>');
+				}else{
+					$('body').append('<br>');
+				}
+			});
+		}
+	});
+});
+</script>
+</body>
+</html>

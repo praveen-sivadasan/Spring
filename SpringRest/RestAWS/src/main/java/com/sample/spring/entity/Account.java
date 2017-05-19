@@ -146,6 +146,15 @@ public class Account implements Serializable {
 		this.userName = userName;
 	}
 
+	@Override
+	public String toString() {
+		return "Account [accountIdPk=" + accountIdPk + ", createDate=" + createDate + ", email=" + email
+				+ ", firstName=" + firstName + ", lastName=" + lastName + ", password=" + password + ", userName="
+				+ userName + "]";
+	}
+	
+	
+
 	/*
 	 * public UserDetail getUserDetail() { return this.userDetail; }
 	 * 

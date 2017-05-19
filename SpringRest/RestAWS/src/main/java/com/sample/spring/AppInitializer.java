@@ -1,16 +1,19 @@
 package com.sample.spring;
 
 import javax.servlet.Filter;
+
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import com.sample.spring.utils.ApplicationFilter;
-
 
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	@Override
 	protected Class<?>[] getRootConfigClasses() {
-		return new Class[] { AppConfig.class, JPAConfig.class};
+		//ApplicationConstants.getOutput().add("Searching for users..");
+		//ApplicationConstants.getOutput().add(".");
+		//ApplicationConstants.getOutput().add("AppInitializer.class: Initializing configuration classes..  ");
+		return new Class[] { AppConfig.class, JPAConfig.class };
 	}
 
 	@Override
@@ -20,12 +23,12 @@ public class AppInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
 	@Override
 	protected String[] getServletMappings() {
-		return new String[]{"/*"};
+		return new String[] { "/api/*"};
 	}
-	
+
 	@Override
 	protected Filter[] getServletFilters() {
-		return new Filter[]{new ApplicationFilter()};
+		return new Filter[] { new ApplicationFilter() };
 	}
 
 }

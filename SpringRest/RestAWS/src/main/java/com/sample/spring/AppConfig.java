@@ -12,5 +12,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 public class AppConfig extends WebMvcConfigurerAdapter{
 	
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
+		//ApplicationConstants.getOutput().add("AppConfig.class: Adding resource handlers if any..  ");
 	}
 }

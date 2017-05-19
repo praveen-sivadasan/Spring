@@ -28,6 +28,8 @@ public class JPAConfig {
 	
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+		//ApplicationConstants.getOutput().add("JPAConfig.class: Intializing EnitityManagerFactory..  ");
+
 		LocalContainerEntityManagerFactoryBean emf = new LocalContainerEntityManagerFactoryBean();
 		emf.setDataSource(dataSource());
 		emf.setPackagesToScan(new String[]{"com.sample.spring.entity"});
