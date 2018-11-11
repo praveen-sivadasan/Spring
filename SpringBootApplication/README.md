@@ -14,6 +14,7 @@ Creates a gs-spring-boot-0.1.0.jar in the target folder
 > http://localhost:8080/
 
 5. Terminate the application by running the following in CMD for windows
+Identify the PID for port 8080
 > netstat -ano | findstr :8080
+Kill the PID
 > taskkill /PID 47752 /F
-Note: 47752 is the PID which can be identified from the netstat command
